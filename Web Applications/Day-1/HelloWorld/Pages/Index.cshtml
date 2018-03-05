@@ -1,0 +1,17 @@
+@page   
+<!--Which is page dirrective,
+ Without page dirrective couldn't run page -->
+ @using Microsoft.Extensions.Configuration
+ @inject IConfiguration Configuration
+
+ @{
+        var sum=2+4;
+    }
+
+ <div style="text-align:center; color:red;">
+    <h1> Hello Princess,</br>How are you? </h1>
+    <p>@DateTime.Now</p>  
+    <h1>Total Sum=@sum</h1>
+    <h1>Email-@Configuration["Email"]</h1>
+ </div>
+
